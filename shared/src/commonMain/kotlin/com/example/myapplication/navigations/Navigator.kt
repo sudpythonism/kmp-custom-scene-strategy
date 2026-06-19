@@ -9,7 +9,18 @@ class Navigator(val state: NavigationState) {
          if(route in state.backStack.keys){
              state.topLevelRoute = route
          }else{
-             state.backStack[state.topLevelRoute]?.add(route)
+
+             val currentStack = state.backStack[state.topLevelRoute]
+
+             val lastRoute = currentStack?.lastOrNull()
+
+             if ( lastRoute!= null && route::class == lastRoute::class){
+
+                currentStack.removeLastOrNull()
+             }
+
+
+             currentStack?.add(route)
          }
 
     }

@@ -20,9 +20,6 @@ class ListDetailSceneStrategy<T: Any>(
             return null
         }
 
-
-
-
         val detailEntry = entries.lastOrNull()
             ?.takeIf {
                 it.metadata.containsKey(ListDetailScene.DETAIL_KEY)
