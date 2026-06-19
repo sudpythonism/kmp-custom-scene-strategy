@@ -17,6 +17,7 @@ class Navigator(val state: NavigationState) {
              if ( lastRoute!= null && route::class == lastRoute::class){
 
                 currentStack.removeLastOrNull()
+
              }
 
 
