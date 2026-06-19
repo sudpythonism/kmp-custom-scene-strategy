@@ -18,6 +18,11 @@ class Navigator(val state: NavigationState) {
 
                 currentStack.removeLastOrNull()
 
+
+
+
+
+
              }
 
 
